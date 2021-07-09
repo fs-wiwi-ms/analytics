@@ -61,6 +61,7 @@ COPY .gitlab/build-scripts/docker-entrypoint.sh /entrypoint.sh
 
 RUN chmod a+x /entrypoint.sh && \
     adduser -h /app -u 1000 -s /bin/sh -D plausibleuser
+COPY Procfile /app
 
 COPY --from=buildcontainer /app/_build/prod/rel/plausible /app
 RUN chown -R plausibleuser:plausibleuser /app
