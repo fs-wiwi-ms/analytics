@@ -46,3 +46,5 @@ dokku config:set plausible SECRET_KEY_BASE=$(openssl rand -hex 64)
 #                            ADMIN_USER_NAME=admin \
 #                            ADMIN_USER_PWD=admin1234 \
 #                            DISABLE_REGISTRATION=true
+
+# dokku config:set plausible BASE_URL=https://plausible.fachschaft-wiwi.ms
